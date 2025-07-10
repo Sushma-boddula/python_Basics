@@ -1,0 +1,15 @@
+weight=float(input("Enter weight in kg: "))
+height=float(input("Enter height in mtrs: "))
+
+BMI=weight/(height**2)
+
+if (BMI<18.5):
+    print(f"Your BMI is {BMI}. You are in Under weight category")
+elif (18.5>BMI<=24.9):
+    print(f"Your BMI is {BMI}. You are in Normal weight category")
+elif (25>BMI<=29.9):
+    print(f"Your BMI is {BMI}. You are in Over weight category")
+elif (30>BMI<=34.9):
+    print(f"Your BMI is {BMI}. You are in Obese category")
+else:
+    print(f"Your BMI is {BMI}. You are in Extremely Obese category")
