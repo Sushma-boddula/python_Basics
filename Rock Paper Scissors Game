@@ -1,0 +1,53 @@
+import random
+
+print("\nWelcome to Rock, Paper and Scissors Game")
+print("\n RULES:\n1. Rock Vs Paper = Paper wins.\n2. Paper Vs Scissors = Scissors win.\n3. Scissors Vs Rock = Rock wins.")
+while True:
+    print("Rock = 1\nPaper = 2\nScissors = 3")
+
+    user_choice=int(input("Enter your choice:"))
+     
+    while user_choice>3 or user_choice<1:
+        user_choice=int(input("Enter a valid choice please:"))
+
+    if (user_choice==1):
+        print("Your choice is Rock")
+    elif (user_choice==2):
+        print("Your choice is Paper")
+    elif (user_choice==3):
+        print("Your choice is Scissors")
+    
+    print("Now it's computer turn")
+
+    comp_choice=random.randint(1,3)
+    if (comp_choice==1):
+        print("Computer choice is Rock")
+    elif (comp_choice==2):
+        print("Computer choice is Paper")
+    elif (comp_choice==3):
+        print("Computer choice is Scissors")
+    
+    if (user_choice==comp_choice):
+        print("It's a TIE")
+    elif (user_choice==1):
+        if(comp_choice==2):
+            print("=====> Computer Wins <=====")
+        elif(comp_choice==3):
+            print("=====> User Wins <=====")
+    elif (user_choice==2):
+        if(comp_choice==1):
+            print("=====> User Wins <=====")
+        elif(comp_choice==3):
+            print("=====> Computer Wins <=====")
+    elif (user_choice==3):
+        if(comp_choice==1):
+            print("=====> Computer Wins <=====")
+        elif(comp_choice==2):
+            print("=====> User Wins <=====")
+    print("GAME ENDED")
+
+    print("Do you want to play again? (Y/N)")
+    ans=input().lower()
+    if ans=='n':
+        break
+print("Thanks for playing")    
